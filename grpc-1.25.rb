@@ -32,3 +32,18 @@ class Grpc125 < Formula
     (buildpath/"third_party/googletest").install resource("gtest")
     system "make", "grpc_cli", "prefix=#{prefix}"
     bin.install "bins/opt/grpc_cli"
+  end
+     
+  test do
+    (testpath/"test.cpp").write <<~EOS
+      #include <grpc/grpc.h>
+      int main() {
+        grpc_init();
+        grpc_shutdown();
+        return GRPC_STATUS_OK;
+      }
+    EOS
+    system ENV.cc, "test.cpp", "-I#{include}", "-L#{lib}", "-lgrpc", "-o", "test"
+    system "./test"
+  end
+end
