@@ -1,17 +1,11 @@
 class Grpc < Formula
  desc "Next generation open source RPC library and framework"
   homepage "https://grpc.io/"
-  url "https://github.com/grpc/grpc/archive/v1.25.0.tar.gz"
+  url "https://github.com/masterchef8/homebrew-grpc/releases/download/v1.0/grpc-bottle.tar"
   sha256 "ffbe61269160ea745e487f79b0fd06b6edd3d50c6d9123f053b5634737cf2f69"
-   head "https://github.com/grpc/grpc.git"
+   head "https://github.com/masterchef8/homebrew-grpc.git"
 
-   bottle do
-     sha256 "95d0cc6709f6a4465e9580937db5fd9a45812cf084f0689c71b69666a5bfd65b" => :catalina
-     sha256 "6cc94b6a248af3cd10daa68b732142de4a1a5d4e5b2eaa73fb7bd537fe57cfc7" => :mojave
-     sha256 "fc1760f5aa11cb91f4d535fb0c236197be7406bcab0caf7d5607a829a58a9c8a" => :high_sierra
-   end
-
-   depends_on "autoconf" => :build
+  depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
   depends_on "c-ares"
