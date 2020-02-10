@@ -6,9 +6,7 @@ class Grpc < Formula
    head "https://github.com/masterchef8/homebrew-grpc.git"
 
    bottle do
-     sha256 "4802c31e7341ec14f7053b5efdfdbfcef7f8306c34e46f0c3bdb6ae45ef45140" => :catalina
-     sha256 "6cc94b6a248af3cd10daa68b732142de4a1a5d4e5b2eaa73fb7bd537fe57cfc7" => :mojave
-     sha256 "fc1760f5aa11cb91f4d535fb0c236197be7406bcab0caf7d5607a829a58a9c8a" => :high_sierra
+     sha256 "4802c31e7341ec14f7053b5efdfdbfcef7f8306c34e46f0c3bdb6ae45ef45140"
    end
   depends_on "autoconf" => :build
   depends_on "automake" => :build
