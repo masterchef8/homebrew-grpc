@@ -5,6 +5,10 @@ class Grpc < Formula
   sha256 "4802c31e7341ec14f7053b5efdfdbfcef7f8306c34e46f0c3bdb6ae45ef45140"
    head "https://github.com/masterchef8/homebrew-grpc.git"
 
+  bottle do
+     sha256 "4802c31e7341ec14f7053b5efdfdbfcef7f8306c34e46f0c3bdb6ae45ef45140"
+  end
+ 
   depends_on "autoconf" => :build
   depends_on "automake" => :build
   depends_on "libtool" => :build
