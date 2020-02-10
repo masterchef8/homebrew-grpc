@@ -1,4 +1,4 @@
-class Grpc125 < Formula
+class Grpc < Formula
  desc "Next generation open source RPC library and framework"
   homepage "https://grpc.io/"
   url "https://github.com/grpc/grpc/archive/v1.25.0.tar.gz"
@@ -6,7 +6,7 @@ class Grpc125 < Formula
    head "https://github.com/grpc/grpc.git"
 
    bottle do
-     sha256 "95d0cc6709f6a4465e9580937db5fd9a45812cf084f0689c71b69666a5bfd65b" => :catalina
+     sha256 "95d0cc6709f6a4465e9580937db5fd9a45812cf084f0689c71b69666a5bfd65b" => grpc:catalina
      sha256 "6cc94b6a248af3cd10daa68b732142de4a1a5d4e5b2eaa73fb7bd537fe57cfc7" => :mojave
      sha256 "fc1760f5aa11cb91f4d535fb0c236197be7406bcab0caf7d5607a829a58a9c8a" => :high_sierra
    end
@@ -33,7 +33,7 @@ class Grpc125 < Formula
     system "make", "grpc_cli", "prefix=#{prefix}"
     bin.install "bins/opt/grpc_cli"
   end
-     
+
   test do
     (testpath/"test.cpp").write <<~EOS
       #include <grpc/grpc.h>
